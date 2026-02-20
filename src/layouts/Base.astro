@@ -1,0 +1,49 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Fun, safe mobile apps for kids and families." } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-950 text-gray-100 font-sans antialiased">
+    <nav class="fixed top-0 w-full bg-gray-950/90 backdrop-blur-md border-b border-gray-800 z-50">
+      <div class="max-w-5xl mx-auto px-6 h-24 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <img src="/FlatironKids/FlatironKids-logo.png" alt="Flatiron Kids" class="h-20" />
+        </a>
+        <a href="/privacy" class="text-sm text-gray-400 hover:text-white transition-colors">
+          Privacy
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="border-t border-gray-800 py-12 mt-24">
+      <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+        <p>&copy; {new Date().getFullYear()} Flatiron Kids. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="/privacy" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
+          <a href="mailto:support@flatironkids.co" class="hover:text-gray-300 transition-colors">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-50: #fdf2f2;
+  --color-brand-100: #fce4e4;
+  --color-brand-200: #facaca;
+  --color-brand-300: #f5a3a3;
+  --color-brand-400: #e04848;
+  --color-brand-500: #b91c1c;
+  --color-brand-600: #991b1b;
+  --color-brand-700: #7f1d1d;
+  --color-brand-800: #6b1a1a;
+  --color-brand-900: #5c1a1a;
+  --color-accent-400: #95bd3e;
+  --color-accent-500: #7ba32a;
+  --color-accent-600: #5f811f;
+}
