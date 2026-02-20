@@ -1,0 +1,22 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+
+<Base title="Privacy — Flatiron Kids" description="Privacy policies for Flatiron Kids apps.">
+  <section class="pt-36 pb-20 px-6">
+    <div class="max-w-2xl mx-auto">
+      <h1 class="text-4xl font-extrabold tracking-tight text-white mb-4">Privacy</h1>
+      <p class="text-gray-400 mb-12">Each app has its own privacy policy.</p>
+      <div class="flex flex-col gap-4">
+        <a href="/privacy/railsread" class="block border border-gray-800 rounded-2xl p-6 hover:border-brand-500/50 transition-colors bg-gray-900/50">
+          <h2 class="text-lg font-semibold text-white">Railsread</h2>
+          <p class="text-gray-500 text-sm mt-1">No data collected.</p>
+        </a>
+        <a href="/privacy/nameit" class="block border border-gray-800 rounded-2xl p-6 hover:border-brand-500/50 transition-colors bg-gray-900/50">
+          <h2 class="text-lg font-semibold text-white">Name It!</h2>
+          <p class="text-gray-500 text-sm mt-1">Limited telemetry for voice recognition.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>
